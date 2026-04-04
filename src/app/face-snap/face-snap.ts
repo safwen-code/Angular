@@ -11,10 +11,15 @@ export class FaceSnap implements OnInit {
   description!: string;
   createdDate!: Date;
   snaps!: number;
+  image!: string;
   ngOnInit(): void {
     this.name = 'Archibald';
     this.description = 'Mon meilleur ami depuis tout petit !';
     this.createdDate = new Date();
     this.snaps = 0;
+    this.image = 'assets/camera.jpg';
+  }
+  onAddSnap() {
+    this.snaps++;
   }
 }

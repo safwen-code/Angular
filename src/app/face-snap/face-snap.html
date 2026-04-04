@@ -2,5 +2,6 @@
   <h2>{{ name }}</h2>
   <p>{{ description }}</p>
   <p>{{ createdDate }}</p>
-  <p>{{ snaps }}</p>
+  <img [src]="image" alt="{{ name }}" />
+  <button (click)="onAddSnap()">{{ snaps }} 🤌</button>
 </div>
