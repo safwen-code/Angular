@@ -1,14 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FaceSnapclass } from '../models/face-snap';
+import { UpperCasePipe, LowerCasePipe, TitleCasePipe, NgClass } from '@angular/common';
 @Component({
   selector: 'app-face-snap',
-  imports: [],
+  imports: [UpperCasePipe, LowerCasePipe, TitleCasePipe, NgClass],
   templateUrl: './face-snap.html',
   styleUrl: './face-snap.scss',
 })
 export class FaceSnap implements OnInit {
   @Input() faceSnap!: FaceSnapclass;
-
   textsnap!: string;
   hassnaped!: boolean;
 

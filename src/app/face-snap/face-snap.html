@@ -1,7 +1,9 @@
 <div class="face-snap-card">
-  <h2>{{ faceSnap.title }}</h2>
-  <p>{{ faceSnap.description }}</p>
+  <h2>{{ faceSnap.title | uppercase }}</h2>
+  <p>{{ faceSnap.description | titlecase }}</p>
   <img [src]="faceSnap.imageUrl" alt="{{ faceSnap.title }}" />
   <p>{{ faceSnap.createdDate }}</p>
-  <button (click)="Snap()">{{ textsnap }} {{ faceSnap.snaps }} 🤌</button>
+  <button (click)="Snap()" [ngClass]="{ green: hassnaped, red: !hassnaped }">
+    {{ textsnap | lowercase }} {{ faceSnap.snaps }} 🤌
+  </button>
 </div>
