@@ -1,6 +1,11 @@
 <div class="face-snap-card">
   <h2>{{ faceSnap.title | uppercase }}</h2>
   <p>{{ faceSnap.description | titlecase }}</p>
+  @if (faceSnap.location) {
+  <p>{{ faceSnap.location }}</p>
+  }@else{
+  <p>Location not specified</p>
+  }
   <img [src]="faceSnap.imageUrl" alt="{{ faceSnap.title }}" />
   <p>{{ faceSnap.createdDate }}</p>
   <p>{{ faceSnap.createdDate | date: 'fullDate' }}</p>
