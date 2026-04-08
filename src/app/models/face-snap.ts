@@ -1,16 +1,12 @@
 export class FaceSnapclass {
-  title: string;
-  description: string;
-  imageUrl: string;
-  createdDate: Date;
-  snaps: number;
+  location!: string;
 
   constructor(
-    title: string,
-    description: string,
-    imageUrl: string,
-    createdDate: Date,
-    snaps: number
+    public title: string,
+    public description: string,
+    public imageUrl: string,
+    public createdDate: Date,
+    public snaps: number
   ) {
     this.title = title;
     this.description = description;
@@ -24,5 +20,8 @@ export class FaceSnapclass {
 
   removeSnap(): void {
     this.snaps--;
+  }
+  setLocation(location: string): void {
+    this.location = location;
   }
 }
